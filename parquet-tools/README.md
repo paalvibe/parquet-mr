@@ -39,6 +39,23 @@ To use it in hadoop mode, the default profile will exclude the hadoop client dep
 cd parquet-tools && mvn clean package 
 ```
 
+
+If you get `Error: Could not find or load main class jar` then specify main class
+
+```sh
+java -cp ./parquet-tools-1.6.0.jar parquet.tools.Main cat foo.parquet
+```
+
+Available functions:
+
+```sh
+cat
+dump
+schema
+head
+meat
+```
+
 The resulting jar is target/parquet-tools-<Version>.jar, you can copy it to the place where you
 want to use it
 
